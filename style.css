@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Roboto:wght@400;700&family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, #1b4778, #006fa8, #0097ae, #00ba80, #26d615);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
