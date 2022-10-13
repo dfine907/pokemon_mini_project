@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #1b4778, #006fa8, #0097ae, #00ba80, #26d615);
+    background-image: linear-gradient(to bottom, #3088df, #0091d4, #0092a6, #008d63, #0a8210);
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,10 @@ body {
     margin: 0;
 }
 
-.pokemon {
-    width: 100px
+
+
+.flower {
+    width: 200px;
+    margin-bottom: 20px;
+    
 }
