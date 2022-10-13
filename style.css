@@ -15,3 +15,7 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+.pokemon {
+    width: 100px
+}
