@@ -41,6 +41,11 @@ h1, h2 {
   margin-left: 50px;
 }
 
+.eevee {
+  width: 150px;
+  margin-left: 50px;
+}
+
 .grass {
   position: relative;
   top: 10px;
