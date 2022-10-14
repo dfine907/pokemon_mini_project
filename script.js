@@ -3,9 +3,22 @@
 // newImage.classList.add("pokemon")
 // document.body.append(newImage)
 
-let eevee = document.getElementById("eevee")
-let charmander = document.getElementById("charmander")
-let flower = document.getElementById("flower")
+function toggleShake(element) {
+    // Animations only occur when a new class is added to the element.
+    // Since we want this to happen every time, 
+    //we can switch between two different animations
+    if (element.classList.contains("shake1")) {
+      element.classList.remove("shake1");
+      element.classList.add("shake2");
+    } else {
+      element.classList.remove("shake2");
+      element.classList.add("shake1");
+    }
+  }
+
+const eevee = document.getElementById("eevee")
+const charmander = document.getElementById("charmander")
+const flower = document.getElementById("flower")
 
 class Flower {
   constructor() {
@@ -17,16 +30,14 @@ class Flower {
 
     this.index = 0
 
-    this.image = document.createElement("img")
-    this.image.classList.add("flower")
+    this.flowerImage = document.createElement("img")
+    this.flowerImage.classList.add("flower")
 
-    this.image.src = this.flowerImageArray[this.index]
-    flower.append(this.image)
+    this.flowerImage.src = this.flowerImageArray[this.index]
+    flower.append(this.flowerImage)
 
-    this.image.addEventListener(
-      "click",
-      this.changeFlowerPicture.bind(this)
-    )
+    this.flowerImage.addEventListener(
+      "click",this.changeFlowerPicture.bind(this))
   }
   changeFlowerPicture() {
     if (this.index < 2) {
@@ -34,7 +45,7 @@ class Flower {
     } else {
       this.index[0]
     }
-    this.image.src = this.flowerImageArray[this.index]
+    this.flowerImage.src = this.flowerImageArray[this.index]
   }
 }
 
@@ -42,3 +53,40 @@ let flower1 = new Flower()
 let flower2 = new Flower()
 let flower3 = new Flower()
 
+
+class Charmander {
+    constructor() {
+      this.imageArray = [
+        "images/pokeball.png",
+        "images/charmander/charmander0.png",
+        "images/charmander/charmander1.png",
+        "images/charmander/charmander2.png",
+      ];
+      this.charIndex = 0;
+      this.charmanderImage = document.createElement("img");
+      this.charmanderImage.classList.add('char')
+      this.charmanderImage.src = this.imageArray[this.charIndex];
+      charmander.append(this.charmanderImage);
+  
+      this.charmanderImage.addEventListener("click", () => {
+        if (Math.floor(Math.random() * 4) + 1 === 1) {
+          this.evolePictures();
+        } else {
+          toggleShake(this.charmanderImage);
+        }
+      });
+    }
+  
+    evolePictures = () => {
+      if (this.charIndex < 3) {
+        this.charIndex += 1;
+      }
+      this.charmanderImage.src = this.imageArray[this.charIndex];
+    };
+  }
+  
+  let firstCharmander = new Charmander();
+  let secondCharmander = new Charmander();
+
+  main.append(firstCharmander.charmanderImage)
+  main.append(secondCharmander.charmanderImage)
