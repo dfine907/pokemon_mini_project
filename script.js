@@ -134,3 +134,5 @@ let secondEevee = new Eevee()
 let thirdEevee = new Eevee()
 
 eevee.append(firstEevee.eeveeImage)
+eevee.append(secondEevee.eeveeImage)
+eevee.append(thirdEevee.eeveeImage)
