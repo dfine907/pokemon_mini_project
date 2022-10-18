@@ -41,8 +41,6 @@ class Flower {
   changeFlowerPicture() {
     if (this.index < 2) {
       this.index += 1
-    } else {
-      this.index[0]
     }
     this.flowerImage.src = this.flowerImageArray[this.index]
   }
