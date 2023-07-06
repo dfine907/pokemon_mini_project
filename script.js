@@ -106,7 +106,7 @@ class Eevee {
     this.index = 0
     this.eeveeImage = document.createElement("img")
     this.eeveeImage.classList.add("eevee")
-
+    
     this.eeveeImage.src = this.imageArray[this.index]
 
     this.eeveeImage.addEventListener("click", () => {
