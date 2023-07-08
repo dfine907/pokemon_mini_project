@@ -28,7 +28,8 @@ class Flower {
     this.index = 0
 
     this.flowerImage = document.createElement("img")
-    this.flowerImage.classList.add("flower")
+    
+    // this.flowerImage.classList.add("flower")
 
     this.flowerImage.src = this.flowerImageArray[this.index]
     flower.append(this.flowerImage)
